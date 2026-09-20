@@ -1,0 +1,345 @@
+{
+  "info": {
+    "_postman_id": "288e6794-2ea6-4f3b-ba8f-f392d32e7a63",
+    "name": "collection_bank_postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17816462",
+    "_collection_link": "https://go.postman.co/collection/17816462-288e6794-2ea6-4f3b-ba8f-f392d32e7a63?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://localhost:8001/api/clients",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "EchoapiRuntime/1.1.0"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8001/api/clients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8001",
+          "path": [
+            "api",
+            "clients"
+          ]
+        },
+        "description": "Generated from cURL: curl --request GET \\\n  --url http://localhost:8001/api/clients \\\n  --header 'Accept: */*' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: EchoapiRuntime/1.1.0'"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8001/api/clients",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "EchoapiRuntime/1.1.0"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"dni\":\"0930996699\",\n    \"name\":\"Joseph\",\n    \"password\":\"123456\",\n    \"gender\":\"M\",\n    \"age\":33,\n    \"address\":\"Guayaquil\",\n    \"phone\":\"099999999\",\n    \"active\":true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8001/api/clients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8001",
+          "path": [
+            "api",
+            "clients"
+          ]
+        },
+        "description": "Generated from cURL: curl --request POST \\\n  --url http://localhost:8001/api/clients \\\n  --header 'Accept: */*' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: EchoapiRuntime/1.1.0' \\\n  --data '{\n    \"dni\":\"0930996699\",\n    \"name\":\"Joseph\",\n    \"password\":\"123456\",\n    \"gender\":\"M\",\n    \"age\":33,\n    \"address\":\"Guayaquil\",\n    \"phone\":\"099999999\",\n    \"active\":true\n}'"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/api/accounts",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "EchoapiRuntime/1.1.0"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"number\":\"40001\",\n    \"type\":\"Ahorros\",\n    \"initialAmount\": 1000,\n    \"active\": true,\n    \"clientId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/accounts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "accounts"
+          ]
+        },
+        "description": "Generated from cURL: curl --request POST \\\n  --url http://localhost:8000/api/accounts \\\n  --header 'Accept: */*' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: EchoapiRuntime/1.1.0' \\\n  --data '{\n    \"number\":\"40001\",\n    \"type\":\"Ahorros\",\n    \"initialAmount\": 1000,\n    \"active\": true,\n    \"clientId\": 1\n}'"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/api/accounts",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "EchoapiRuntime/1.1.0"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/accounts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "accounts"
+          ]
+        },
+        "description": "Generated from cURL: curl --request GET \\\n  --url http://localhost:8000/api/accounts \\\n  --header 'Accept: */*' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: EchoapiRuntime/1.1.0'"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/api/transactions",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "EchoapiRuntime/1.1.0"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"date\":\"2026-09-19T18:00:00\",\n    \"type\":\"Retiro\",\n    \"amount\":-1500,\n    \"accountId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/transactions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "transactions"
+          ]
+        },
+        "description": "Generated from cURL: curl --request POST \\\n  --url http://localhost:8000/api/transactions \\\n  --header 'Accept: */*' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: EchoapiRuntime/1.1.0' \\\n  --data '{\n    \"date\":\"2026-09-19T18:00:00\",\n    \"type\":\"Retiro\",\n    \"amount\":-1500,\n    \"accountId\": 1\n}'"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/api/transactions/clients/1/report?dateTransactionStart=2026-09-19&dateTransactionEnd=2026-09-20",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "EchoapiRuntime/1.1.0"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/transactions/clients/1/report?dateTransactionStart=2026-09-19&dateTransactionEnd=2026-09-20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "transactions",
+            "clients",
+            "1",
+            "report"
+          ],
+          "query": [
+            {
+              "key": "dateTransactionStart",
+              "value": "2026-09-19"
+            },
+            {
+              "key": "dateTransactionEnd",
+              "value": "2026-09-20"
+            }
+          ]
+        },
+        "description": "Generated from cURL: curl --request GET \\\n  --url 'http://localhost:8000/api/transactions/clients/1/report?dateTransactionStart=2026-09-19&dateTransactionEnd=2026-09-20' \\\n  --header 'Accept: */*' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: EchoapiRuntime/1.1.0'"
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/api/transactions",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "*/*"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "EchoapiRuntime/1.1.0"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/transactions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "transactions"
+          ]
+        },
+        "description": "Generated from cURL: curl --request GET \\\n  --url http://localhost:8000/api/transactions \\\n  --header 'Accept: */*' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: EchoapiRuntime/1.1.0'"
+      },
+      "response": []
+    }
+  ]
+}
