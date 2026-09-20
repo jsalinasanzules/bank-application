@@ -42,7 +42,11 @@ public class ClientController {
 	public ResponseEntity<ClientDto> get(@PathVariable Long id){
 		// api/clients/{id}
 		// Get clients by id
-		return ResponseEntity.ok(clientService.getById(id));
+		ClientDto client = clientService.getById(id);
+		if(client == null){
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok(client);
 	}
 
 	@PostMapping
@@ -58,16 +62,34 @@ public class ClientController {
 	public ResponseEntity<ClientDto> update(@PathVariable Long id, @RequestBody ClientDto clientDto){
 		// api/clients/{id}
 		// Update client
-		clientDto.setId(id);
-		return ResponseEntity.ok(clientService.update(clientDto));
+		
+		ClientDto client = clientService.getById(id);
+		if(client == null){
+			return ResponseEntity.notFound().build();
+		}
+		client.setDni(clientDto.getDni());
+		client.setName(clientDto.getName());
+		client.setPassword(clientDto.getPassword());
+		client.setGender(clientDto.getGender());
+		client.setAge(clientDto.getAge());
+		client.setAddress(clientDto.getAddress());
+		client.setPhone(clientDto.getPhone());
+		client.setActive(clientDto.isActive());
+		
+		ClientDto clientUpdated = clientService.update(client);
+		return ResponseEntity.ok(clientUpdated);
 	}
 
 	@PatchMapping("/{id}")
 	public ResponseEntity<ClientDto> partialUpdate(@PathVariable Long id, @RequestBody PartialClientDto partialClientDto){
 		// api/accounts/{id}
 		// Partial update accounts
+		ClientDto client = clientService.partialUpdate(id,partialClientDto);
+		if(client == null){
+			return ResponseEntity.notFound().build();
+		}
 		return ResponseEntity.ok(
-			clientService.partialUpdate(id,partialClientDto)
+			client
 		);
 	}
 
@@ -75,6 +97,10 @@ public class ClientController {
 	public ResponseEntity<Void> delete(@PathVariable Long id){
 		// api/clients/{id}
 		// Delete client
+		ClientDto client = clientService.getById(id);
+		if(client == null){
+			return ResponseEntity.notFound().build();
+		}
 		clientService.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}
